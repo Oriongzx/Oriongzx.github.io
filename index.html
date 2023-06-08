@@ -1,585 +1,323 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"oriongzx.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="gzx">
-<meta property="og:type" content="website">
-<meta property="og:title" content="gzx">
-<meta property="og:url" content="https://oriongzx.github.io/index.html">
-<meta property="og:site_name" content="gzx">
-<meta property="og:description" content="gzx">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="gzx">
-<meta property="article:tag" content="gzx">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://oriongzx.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>gzx</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body,
+        html,
+        #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=3.0&ak=hbjqFXbfgGcgoFspyEyNL0iLOw2YaYiy"></script>
+    <title>Black and odorous water bodies</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+<body>
+    <input id="search-input" type="text">
+    <button class="open-btn">&#9776;</button>
+    <div class="sidebar">
+        <ul>
+            <li><button class="close-btn">&times;</button></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">添加图像</a></li>
+            <li><a href="#">设置</a></li>
+            <li><a href="#">设置</a></li>
+            <li id="about"><a href="#">关于我们</a></li>
+        </ul>
     </div>
-  </div>
+    <div id="allmap"></div>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">gzx</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">奔赴山海 保持热爱</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://oriongzx.github.io/2023/05/14/text/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="gzx">
-      <meta itemprop="description" content="gzx">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gzx">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/14/text/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-05-14 11:56:35 / 修改时间：11:56:55" itemprop="dateCreated datePublished" datetime="2023-05-14T11:56:35+08:00">2023-05-14</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
+    <!-- about -->
+    <div id="about-frame">
+        <div class="about-content">
+            <span class="close">&times;</span>
+            <p>黑臭水体检测系统</p>
+            <p>By:gzx</p>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://theme-next.js.org/"><br><img src="https://ts4.cn.mm.bing.net/th?id=ODLS.435e699a-cc33-4a35-870f-54032c53d82b&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="全球 Web 图标"></a></p>
-<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/">js.org</a></p>
-<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/">https://theme-next.js.org</a></p>
-<h2 id="NexT-Theme-for-Hexo"><a href="#NexT-Theme-for-Hexo" class="headerlink" title="NexT - Theme for Hexo"></a><a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT - Theme for Hexo</a></h2><p>网页NexT - Theme for Hexo. Posted on 2020-03-01 Disqus: 0 Comments. Welcome to the NexT documentation site! NexT is a high quality elegant theme for Hexo. It is crafted from scratch, with love.</p>
-<ul>
-<li><ul>
-<li><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/">Docs</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/archives/">Archives 64</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/">Theme Settings</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/plugins/">Plugins</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/deployment">Deployment</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/next-8-12-1-released/">🐞 Bug Fixes</a></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="进一步探索"><a href="#进一步探索" class="headerlink" title="进一步探索"></a>进一步探索</h2><p><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next"><img src="https://ts4.cn.mm.bing.net/th?id=ODLS.fe916855-7a5a-4f44-b52e-1c5c31f0329d&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">GitHub - iissnan&#x2F;hexo-theme-next: Elegant theme for Hexo.</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">github.com</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next"><img src="https://ts4.cn.mm.bing.net/th?id=ODLS.fe916855-7a5a-4f44-b52e-1c5c31f0329d&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">theme-next&#x2F;hexo-theme-next: Elegant and powerful theme fo…</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">github.com</a></p>
-<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/"><img src="https://ts4.cn.mm.bing.net/th?id=ODLS.435e699a-cc33-4a35-870f-54032c53d82b&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">Theme Settings | NexT</a></p>
-<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/">theme-next.js.org</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.creative-tim.com/templates/nextjs"><img src="https://ts2.cn.mm.bing.net/th?id=ODLS.a0019981-8f97-4b35-b4e4-b4cd64f1d7a3&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">8+ Nextjs Templates &amp; Themes @ Creative Tim</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.creative-tim.com/templates/nextjs">creative-tim.com</a></p>
-<p><a target="_blank" rel="noopener" href="https://themeforest.net/search/nextjs"><img src="https://ts3.cn.mm.bing.net/th?id=ODLS.4356fad9-79a7-4688-8bc0-58ac3cf31cd7&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">Nextjs Website Templates | ThemeForest</a></p>
-<p><a target="_blank" rel="noopener" href="https://themeforest.net/search/nextjs">themeforest.net</a></p>
-<p><a href="javascript:void(0)">根据热度为您推荐•反馈</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711"><img src="https://ts4.cn.mm.bing.net/th?id=ODLS.9882fc6b-c6e0-4e80-808f-2f15e1d990f0&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="全球 Web 图标"></a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711">知乎专栏</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711">https://zhuanlan.zhihu.com/p/618864711</a></p>
-<h2 id="Hexo-Next主题搭建个人博客-优化全过程（完整详细版）-知乎"><a href="#Hexo-Next主题搭建个人博客-优化全过程（完整详细版）-知乎" class="headerlink" title="Hexo+Next主题搭建个人博客+优化全过程（完整详细版） - 知乎"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版） - 知乎</a></h2><p>网页LWNFZKHOV5JXP56ATF8Q4.png hexo创建个人博客 hexo是什么？正如hexo的首页所显示的，它是一款非常快速，简介，高效的博客框架平台，我们可以利用hexo快速生成博客网站的模板，然后部署为我们自己的博客网站。</p>
-<h2 id="进一步探索-1"><a href="#进一步探索-1" class="headerlink" title="进一步探索"></a>进一步探索</h2><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7169115268944560135"><img src="https://ts1.cn.mm.bing.net/th?id=ODLS.e77e4ebd-d2e4-408e-a6af-771755cd7ea5&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">Hexo-Next主题搭建个人博客最新配置教程！ - 掘金</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7169115268944560135">juejin.cn</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"><img src="https://ts1.cn.mm.bing.net/th?id=ODLS.0b3ab3c6-5a37-48a2-9392-fd2793d6c3ba&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">Hexo-Next主题搭建个人博客最新配置教程！_hexo next主题 …</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">blog.csdn.net</a></p>
-<p><a href="javascript:void(0)">根据热度为您推荐•反馈</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/351031589"><img src="https://ts4.cn.mm.bing.net/th?id=ODLS.9882fc6b-c6e0-4e80-808f-2f15e1d990f0&w=32&h=32&qlt=92&pcl=fffffa&o=6&pid=1.2" alt="全球 Web 图标"></a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/351031589">知乎专栏</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/351031589">https://zhuanlan.zhihu.com/p/351031589</a></p>
-<h2 id="Hexo配置NexT主题教程-知乎"><a href="#Hexo配置NexT主题教程-知乎" class="headerlink" title="Hexo配置NexT主题教程 - 知乎"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/351031589">Hexo配置NexT主题教程 - 知乎</a></h2><p>网页首发于 羽毛工作室官方博客——和有趣的人做尽有趣的事！总之拖了这么久， 《阿里云OSS部署Hexo教程》的后续终于来了。今天说说NexT主题的配置问题。开宗明义：一方面是为了自己Mark自己的骚操作，以免后面迁移的…</p>
-<h2 id="进一步探索-2"><a href="#进一步探索-2" class="headerlink" title="进一步探索"></a>进一步探索</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/251383216"><img src="https://ts4.cn.mm.bing.net/th?id=ODLS.9882fc6b-c6e0-4e80-808f-2f15e1d990f0&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">hexo主题安装以及next8.0主题美化 - 知乎</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/251383216">zhuanlan.zhihu.com</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3a05351a37dc"><img src="https://ts1.cn.mm.bing.net/th?id=ODLS.07e95df8-de7e-403a-bc7e-cf754b1a51a8&w=16&h=16&o=6&pid=1.2" alt="全球 Web 图标">Hexo的Next主题详细配置 - 简书</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3a05351a37dc">www.jianshu.com</a></p>
-<p><a href="javascript:void(0)">根据热度为您推荐•反馈</a></p>
-<h2 id="hexo-next-必应在线翻译-https-cn-bing-com-translator-cc-cn-amp-text-hexo-next-amp-FORM-x3D-BDVSP2-amp-qpvt-x3D-hexo-next"><a href="#hexo-next-必应在线翻译-https-cn-bing-com-translator-cc-cn-amp-text-hexo-next-amp-FORM-x3D-BDVSP2-amp-qpvt-x3D-hexo-next" class="headerlink" title="[hexo next- 必应在线翻译](https://cn.bing.com/translator/?cc=cn&amp;text=hexo next&amp;FORM&#x3D;BDVSP2&amp;qpvt&#x3D;hexo+next)"></a>[hexo next- 必应在线翻译](<a target="_blank" rel="noopener" href="https://cn.bing.com/translator/?cc=cn&text=hexo">https://cn.bing.com/translator/?cc=cn&amp;text=hexo</a> next&amp;FORM&#x3D;BDVSP2&amp;qpvt&#x3D;hexo+next)</h2><p>六角形下一个</p>
-<p>cn.bing.com&#x2F;translator</p>
-<p>此答案有帮助吗?</p>
-<p><a href="javascript:void(0);">是</a></p>
-<p><a href="javascript:void(0);">
-  </a></p>
-
-      
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://oriongzx.github.io/2023/05/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="gzx">
-      <meta itemprop="description" content="gzx">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gzx">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/14/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-05-14 09:39:47 / 修改时间：09:37:17" itemprop="dateCreated datePublished" datetime="2023-05-14T09:39:47+08:00">2023-05-14</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>367</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">gzx</p>
-  <div class="site-description" itemprop="description">gzx</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">gzx</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
-  </div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
 
 </body>
+
 </html>
+<script type="text/javascript">
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.331398, 39.897445);
+    map.centerAndZoom(point, 12);
+
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function (r) {
+        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            var mk = new BMap.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+        }
+        else {
+            alert('failed' + this.getStatus());
+        }
+    }, { enableHighAccuracy: true })
+
+    map.enableScrollWheelZoom(); //启用滚轮放大缩小，默认禁用。
+    map.enableDragging(); //启用地图拖拽，默认启用。
+    map.enableDoubleClickZoom(); //启用双击放大，默认启用。
+    map.enableKeyboard(); //启用键盘操作，默认禁用。键盘的上、下、左、右键可连续移动地图。同时按下其中两个键可使地图进行对角移动。PgUp、PgDn、Home和End键会使地图平移其1/2的大小。+、-键会使地图放大或缩小一级。
+    map.enableInertialDragging(); //	启用地图惯性拖拽，默认禁用。
+    map.enableContinuousZoom(); //	启用连续缩放效果，默认禁用。
+    map.enablePinchToZoom(); //启用双指操作缩放，默认启用。
+    map.enableAutoResize(); //启用自动适应容器尺寸变化，默认启用。
+    //添加控件
+    map.addControl(new BMap.NavigationControl({
+        type: BMAP_NAVIGATION_CONTROL_LARGE, //表示显示完整的平移缩放控件。
+        // type: BMAP_NAVIGATION_CONTROL_SMALL, //表示显示小型的平移缩放控件。
+        //				type: BMAP_NAVIGATION_CONTROL_PAN, //表示只显示控件的平移部分功能。
+        //				type: BMAP_NAVIGATION_CONTROL_ZOOM, //表示只显示控件的缩放部分功能。
+        //anchor: BMAP_ANCHOR_TOP_LEFT, //表示控件定位于地图的左上角。
+        anchor: BMAP_ANCHOR_TOP_RIGHT, //表示控件定位于地图的右上角。
+        //				anchor: BMAP_ANCHOR_BOTTOM_LEFT, //表示控件定位于地图的左下角。
+        //				anchor: BMAP_ANCHOR_BOTTOM_RIGHT, //表示控件定位于地图的右下角。
+        offset: new BMap.Size(5, 50)
+    })); //设置地图平移缩放控件，PC端默认位于地图左上方type控件外观,anchor控件的停靠位置,offset偏移的位置
+
+    map.addControl(new BMap.MapTypeControl({
+        type: BMAP_MAPTYPE_CONTROL_HORIZONTAL,//按钮水平方式展示，默认采用此类型展示。
+        //				type: BMAP_MAPTYPE_CONTROL_DROPDOWN,//按钮呈下拉列表方式展示。
+        // type: BMAP_MAPTYPE_CONTROL_MAP,//以图片方式展示类型控件，设置该类型后无法指定maptypes属性。
+        mapTypes: [BMAP_NORMAL_MAP, BMAP_SATELLITE_MAP, BMAP_HYBRID_MAP]
+    }));//设置地图类型控件,type控件样式,mapTypes控件展示的地图类型，默认为普通图、卫星图、卫星加路网混合图和三维图。通过此属性可配置控件展示的地图类型。
+
+    map.addControl(new BMap.OverviewMapControl({
+        isOpen: true,
+        anchor: BMAP_ANCHOR_BOTTOM_RIGHT
+    }));//设置地图类型控件缩略地图控件，默认位于地图右下方,isOpen缩略图是否隐藏
+
+    map.addControl(new BMap.ScaleControl());//设置比例尺控件
+
+    map.addControl(new BMap.GeolocationControl({
+        offset: new BMap.Size(20, 60)
+    }));//设置定位控件
+
+    // 创建自动完成实例
+    var ac = new BMap.Autocomplete({
+        "input": "search-input",
+        "location": map
+    });
+
+    // 将输入框 DOM 元素传递给自动完成实例的 setInput 方法
+    ac.setInputValue("");
+
+    // 监听输入框的 "input" 事件，当输入框中有文本时，调用自动完成实例的 search 方法。
+    document.getElementById("search-input").addEventListener("input", function (e) {
+        ac.search(e.target.value);
+    });
+
+    // 在 search 回调函数中，获取自动完成结果并设置为下拉列表的内容
+    ac.addEventListener("onconfirm", function (e) {
+        var poi = e.item.value;
+        var local = new BMap.LocalSearch(map, {
+            onSearchComplete: function (results) {
+                map.centerAndZoom(results.getPoi(0).point, 16);
+            }
+        });
+        local.search(poi.city + poi.district + poi.street + poi.business);
+    });
+
+    //导航栏
+    // 获取按钮元素
+    var toggleBtn = document.querySelector('.open-btn');
+    // 获取侧边栏元素
+    var sideNav = document.querySelector('.sidebar');
+    // 添加点击事件监听器
+    toggleBtn.addEventListener("click", function () {
+        // 切换导航栏的显示状态
+        sideNav.style.left = '0';
+    });
+    //获取关闭元素
+    var close_btn = document.querySelector('.close-btn')
+    close_btn.addEventListener("click", function () { sideNav.style.left = '-250px' })
+
+
+    // about
+    // 获取弹出框元素
+    var about_frame = document.querySelector("#about-frame");
+
+    // 获取“关于我们”按钮元素
+    var about_btn = document.querySelector("#about");
+
+    // 获取关闭按钮元素
+    var span = document.querySelector(".close");
+
+    // 添加点击事件监听器
+    about_btn.addEventListener("click", function () {
+        about_frame.style.display = "block";
+    });
+
+    // 当用户点击关闭按钮时，关闭弹出框
+    span.onclick = function () {
+        about_frame.style.display = "none";
+    }
+
+    // 当用户点击任何地方的其他地方时，关闭弹出框
+    window.onclick = function (event) {
+        if (event.target == about_frame) {
+            about_frame.style.display = "none";
+        }
+    }
+
+</script>
+<style>
+    #search-input {
+        position: absolute;
+        width: 500px;
+        height: 20px;
+        top: 10px;
+        left: 100px;
+        z-index: 10;
+        background-color: #fff;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        height: 50px;
+        outline: none;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+        width: 300px;
+    }
+
+    #search-input:focus {
+        border-radius: 50px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        width: 400px;
+    }
+
+    #search-input input[type="text"] {
+        width: 400px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .sidebar {
+        position: absolute;
+        z-index: 10;
+        top: 0px;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: left 0.5s ease-in-out;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 50px 0;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar li {
+        margin-bottom: 20px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar a {
+        display: block;
+        color: #2b2a2a;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .sidebar a:hover {
+        background-color: #3e88c9;
+        color: #fff;
+    }
+
+    .open-btn {
+        position: absolute;
+        z-index: 10;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background-color: #fff;
+        /* 设置背景颜色 */
+        color: rgb(4, 140, 224);
+        /* 设置填充 */
+        border: none;
+        /* 移除边框 */
+        cursor: pointer;
+        /* 设置鼠标悬停效果 */
+    }
+
+    .open-btn:focus+.sidebar {
+        display: block;
+    }
+
+    .close-btn {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    /* about */
+    /* 弹出框样式 */
+    #about-frame {
+        display: none;
+        /* 隐藏弹出框 */
+        position: absolute;
+        border: none;
+        z-index: 10;
+        left: 500px;
+        top: 100px;
+        border: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* 弹出框内容样式 */
+    .about-content {
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 30% auto;
+        padding: 30px;
+        width: 80%;
+    }
+
+    /* 关闭按钮样式 */
+    .close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        position: relative;
+        right: -20px;
+        top: -20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
