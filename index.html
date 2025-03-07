@@ -1,0 +1,84 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion的个人博客</title>
+    <!-- 网站说明 -->
+    <meta name="description" content="一名在校大学生的个人博客，分享生活，学习技术。" />
+    <!-- 关键字 -->
+    <meta name="Keywords" content="个人博客，计算机技术，自学编程，前端" />
+
+    <link rel="shortcut icon" href=" favicon.ico" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            background-image: url(./images/login.png);
+            background-attachment: scroll;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h2 {
+            color: #222;
+            font-size: 100px;
+        }
+
+        h2 a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        h2 span {
+            transition: 0.5s;
+        }
+
+        h2:hover span:nth-child(1) {
+            margin-right: 10px;
+        }
+
+        h2:hover span:nth-child(2) {
+            margin-left: 30px;
+        }
+
+        h2 span:nth-child(1)::after {
+            opacity: 0;
+            transition: 2s;
+        }
+
+        h2:hover span:nth-child(1)::after {
+            opacity: 1;
+        }
+
+        h2:hover span {
+            color: white;
+            text-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff;
+
+
+        }
+
+        .gongdong {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="login.html"><span>Welcome to My Blog! </span></a></h2>
+    <div class="gundong"></div>
+</body>
+
+</html>
