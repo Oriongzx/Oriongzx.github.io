@@ -1,0 +1,128 @@
+.content {
+    padding-top: 10px;
+    width: 1200px;
+    height: 220px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-bottom: 2px solid grey;
+}
+
+.content .image_left {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/touxiang.jpg);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+}
+
+
+.content .image_right {
+    float: left;
+    background-color: grey;
+    width: 950px;
+    height: 200px;
+    background-image: url(../images/image2.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inf {
+    height: 1000px;
+    margin-bottom: 10px;
+
+
+}
+
+.inf .left {
+    float: left;
+    width: 200px;
+    height: 190px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.inf .left ul li {
+    height: 50px;
+    width: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 17px;
+    background-color: rgb(41, 45, 46);
+
+}
+
+.inf .gundong {
+    width: 200px;
+    height: 200px;
+}
+
+.inf .left ul li:hover {
+    background-color: grey;
+}
+
+.inf .right {
+    float: left;
+    height: 1000px;
+    width: 950px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.b {
+    height: 300px;
+    margin-bottom: 20px;
+
+}
+
+p {
+    padding-top: 10px;
+    text-indent: 2em;
+    color: #666;
+    font-size: 14px;
+}
+
+.inf .right h1 {
+    font-family: '宋体';
+    color: skyblue;
+    border-bottom: 2px solid skyblue;
+}
+
+.home,
+.school,
+.major {
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.major .image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin-right: 50px;
+}
+
+.major .image1 {
+    background-image: url(../images/cehui1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.major .image2 {
+    background-image: url(../images/cehui2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.major .image3 {
+    background-image: url(../images/cehui3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.major .img {
+    height: 200px;
+}

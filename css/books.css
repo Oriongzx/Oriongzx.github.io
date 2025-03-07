@@ -1,0 +1,126 @@
+.books {
+    width: 1200px;
+    height: 4000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.book {
+    padding-top: 20px;
+}
+
+.book .left1 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book1.jpg);
+}
+
+.book .inf {
+    float: left;
+    width: 200px;
+    height: 400px;
+}
+
+.book .inf ul {
+    margin-top: 150px;
+    padding-left: 10px;
+}
+
+.book .inf ul li {
+    color: #666;
+    font-size: 14px;
+}
+
+.book .jianjie {
+    float: left;
+    width: 730px;
+    height: 400px;
+}
+
+.book .jianjie .neirong {
+    width: 730px;
+    height: 200px;
+}
+
+.book .jianjie .zuozhe {
+    width: 730px;
+    height: 200px;
+}
+
+.book .jianjie h1 {
+    font-family: '宋体';
+    color: #4a9f62;
+}
+
+.book .jianjie .neirong .art,
+.book .jianjie .zuozhe .art {
+    text-indent: 2em;
+    padding-top: 40px;
+    color: #666;
+}
+
+.book .left2 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book2.jpg);
+}
+
+.book .left3 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book3.jpg);
+}
+
+.book .left4 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book4.jpg);
+}
+
+.book .left5 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book5.jpg);
+}
+
+.book .left6 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book6.jpg);
+}
+
+.book .left7 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book7.jpg);
+}
+
+.book .left8 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book8.jpg);
+}
+
+.book .left9 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book9.jpg);
+}
+
+.book .left10 {
+    float: left;
+    width: 270px;
+    height: 380px;
+    background-image: url(../images/book10.jpg);
+}

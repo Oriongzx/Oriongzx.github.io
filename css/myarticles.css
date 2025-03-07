@@ -1,0 +1,155 @@
+/* 把我们所有标签的内外边距清零 margin padding不会撑大盒子*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal;
+}
+
+/* 去掉li 的小圆点 */
+li {
+    list-style: none;
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle;
+}
+
+button {
+    /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+button,
+input {
+    /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 默认有灰色边框，我们要去掉 */
+    border: 0;
+    outline: none;
+}
+
+body {
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #141c1e;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    background-image: url(../images/banner.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 版心 */
+.w {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* nav模块 */
+.nav {
+    height: 70px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.nav ul li {
+    height: 70px;
+    line-height: 70px;
+    float: left;
+    font-size: 18px;
+    transition: 0.5s;
+    margin-left: 50px;
+}
+
+.nav ul li h1 {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.nav ul li a {
+    padding: 20px;
+}
+
+
+.nav ul li:hover {
+    border-bottom: 2px solid #bfbfbf;
+    font-size: 20px;
+}
+
+
+
+/* contents模块 */
+.contents {
+    height: 500px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.contents li {
+    padding-top: 10px;
+    padding: 10px;
+}
+
+.contents li span {
+    color: #666;
+}
+
+.contents li:hover {
+    background-color: rgba(102, 102, 102, .3);
+}
+
+/* footer模块 */
+.footer {
+    height: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+
+.footer ul {
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+button {
+    background: rgba(21, 28, 30, 0.3);
+    color: #666;
+    font-size: 12px;
+}
+
+.footer .w a {
+    padding: 20px;
+}

@@ -1,0 +1,71 @@
+.inf .right .image_ {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.image1huo {
+    background-image: url(../images/image1huo.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image2huo {
+    background-image: url(../images/image2huo.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image3huo {
+    background-image: url(../images/image3huo.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image1hai {
+    background-image: url(../images/image1hai.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image2hai {
+    background-image: url(../images/image2hai.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image3hai {
+    background-image: url(../images/image3hai.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image1quan {
+    background-image: url(../images/image1quan.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image2quan {
+    background-image: url(../images/image2quan.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image3quan {
+    background-image: url(../images/image3quan.png);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+}
